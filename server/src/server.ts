@@ -1,4 +1,8 @@
+import * as dotenv from "dotenv";
+dotenv.config();
+
 import cors from "cors";
+
 import express from "express";
 
 import { PrismaClient } from "@prisma/client";
@@ -98,4 +102,4 @@ app.get("/ads/:id/discord", async (request, response) => {
   });
 });
 
-app.listen(3333);
+app.listen(process.env.PORT);
